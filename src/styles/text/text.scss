@@ -1,0 +1,56 @@
+//Title
+.title-wrapper {
+  @include size(100%, auto);
+  @include flex(flex-start, center, column);
+  max-width: 800px;
+
+  h1, h2, h3{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+
+  h2{
+    color: $primary-color !important;
+  }
+
+  &.title-left{
+    @include flex(flex-start, flex-start, column);
+    h1, h2, h3{
+      text-align: left;
+    }
+  }
+
+  *{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &.title-button{
+    margin-bottom: 75px;
+  }
+
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .title-wrapper {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title-wrapper {
+    margin-bottom: 75px;
+  }
+}
+
+
+.paragraph{
+  width: 100%;
+  max-width: 800px;
+  @include flex(flex-start, center, column);
+  text-align: left;
+
+}

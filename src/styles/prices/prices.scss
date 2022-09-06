@@ -1,0 +1,90 @@
+.prices {
+  @include size(100%, auto);
+  @include flex(space-between, flex-start, row);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  @include margin-top(-150px);
+}
+
+.price-card {
+  @include flex(flex-start, center, column);
+  height: auto;
+  min-height: 480px;
+  width: 30.333%;
+  max-width: 400px;
+  border: 3px solid $primary-color;
+  padding: 50px 20px;
+  background-color: white;
+
+}
+
+.price-card-header {
+  width: 100%;
+  @include flex(flex-start, center, column);
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $primary-color;
+  padding-bottom: 20px;
+  min-height: 150px;
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    text-decoration: line-through;
+  }
+
+}
+
+.price-card-list {
+  @include flex(flex-start, center, column);
+  text-align: center;
+  list-style: none;
+  margin-bottom: 20px;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.price-disclaimers{
+  @include flex(flex-start, center, column);
+  width: 100%;
+  max-width: 1600px;
+  margin-top: 100px;
+  text-align: center;
+  border: 8px dashed $primary-color;
+  @include padding(50px);
+
+  .slogan{
+    color: $primary-color;
+  }
+
+  .subtitle{
+    color: $primary-color;
+  }
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .prices {
+    @include size(100%, auto);
+    @include flex(flex-start, center, column);
+   }
+
+  .price-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .prices {
+    @include margin-top(-50px);
+  }
+
+}

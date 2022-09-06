@@ -1,0 +1,143 @@
+{
+  "buttons": {
+    "offerte": "Vraag offerte aan"
+  },
+  "user_notifications": {
+    "contact": {
+      "success": {
+        "title": "Message sent successfully",
+        "text": "Bedankt voor uw bericht, Daly verhuizingen komt zo spoedig mogelijk bij u terug"
+      },
+      "error": {
+        "title": "The message could not be sent",
+        "text": "There was an error trying to send the message. Please try again or send us an email at contact@asrr.nl"
+      }
+    }
+  },
+  "header": {
+    "home": "Home",
+    "about": {
+      "title": "Over ons",
+      "link_1": "Over",
+      "link_2": "Diensten",
+      "link_3": "Tarieven"
+    },
+    "cities": {
+      "title": "Verhuisgebieden",
+      "link_1": "Den Haag",
+      "link_2": "Rotterdam",
+      "link_3": "Amsterdam",
+      "link_4": "Utrecht"
+    },
+    "contact": "Contact",
+    "offerte": "Vraag offerte aan"
+  },
+  "footer": {
+    "home": {
+      "title": "Home",
+      "benefits": "Waarom Daly Verhuizingen",
+      "services": "Diensten",
+      "reviews": "Reviews"
+    },
+    "about": {
+      "title": "Over ons",
+      "about": "Over Daly Verhuizingen",
+      "services": "Diensten",
+      "prices": "Tarieven"
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Daly Verhuizingen",
+      "street": "straatnaam",
+      "offerte": "Offerte aanvragen",
+      "zip": "postcode",
+      "tel": "Bel ons: +31618152723",
+      "mail": "Mail ons: info@dalyverhuizingen.nl",
+      "opening": "Open: maandag t/m zondag van 9:00 tot 23:00",
+      "kvk": "Kvk nummer: 82360200",
+      "directions": "Plan uw route"
+    },
+    "information": {
+      "title": "Informatie",
+      "policy": "Algemene voorwaarden",
+      "privacy": "Privacy Beleid"
+    },
+    "social": {
+      "title": "Volg ons op Social Media"
+    }
+  },
+  "home": {
+    "landing": {
+      "title": "Welkom bij Daly Verhuizingen",
+      "text": "Al jarenlang uw specialist in voordelige verhuizingen of transportklussen door heel Nederland!",
+      "subtext": "Onze missie is om u volledig te ontzorgen van uw verhuizing. Hierbij staat u als klant centraal, waarbij uw wensen onze prioriteiten zijn. Vraag vrijblijvend uw prijsopgave hieronder aan."
+    },
+    "benefits": {
+      "title": "Waarom Daly Verhuizingen?"
+    },
+    "services": {
+      "title": "Onze diensten"
+    },
+    "reviews": {
+      "title": "Vertrouwd door"
+    }
+  },
+  "about": {
+    "landing": {
+      "title": "Over ons"
+    },
+    "paragraph_1": {
+      "title": "Over Daly Verhuizingen",
+      "text": "Daly Verhuizingen is opgericht door professionele ondernemers. Ons bedrijf heeft\nzich al generaties voortgezet als familiebedrijf, waarbij wij klaar staan voor u als\ngediplomeerde ondernemers.\nWij van Daly Verhuizingen doen meer dan alleen uw verhuizing. Ons doel is om onze\nklantrelatie met u als klant op te bouwen. Iedere klant volledig ontzorgen met zijn of\nhaar wensen met betrekking tot de voor – en nazorg tijdens het verhuizingsproces\nstaat bij ons centraal."
+    },
+    "services": {
+      "title": "All onze diensten"
+    },
+    "prices": {
+      "title": "Onze Tarieven"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Heeft u vragen of wilt u weten wat wij voor u kunnen betekenen? Neem gerust contact op met ons via de mail.",
+    "form": {
+      "name": "Naam*",
+      "email": "Email*",
+      "message": "Opmerkingen*",
+      "checkbox": "Akkoord",
+      "privacy": "Met bovenstaande akkoordverklaring, gaat u ermee akkoord dat Daly Verhuizingen uw persoonlijke gegevens voor de contactaanvraag verwerkt. Bekijk voor meer informatie over de manier waarop Daly Verhuizingen met uw gegevens omgaat in onze",
+      "button": "Verstuur"
+    }
+  },
+  "offerte": {
+    "landing": {
+      "title": "Vraag een offerte aan"
+    },
+    "title": "Offerte aanvragen",
+    "text": "Dank dat u voor Daly Verhuizingen kiest. Wij helpen u graag verder en snel tot ziens",
+    "form": {
+      "name": "Naam*",
+      "email": "Email*",
+      "phone": "Telefoonnummer*",
+      "type": "Wilt u een verhuiswagen, verhuiskracht of allebei?",
+      "truck": "Wilt u een verhuiswagen huren?",
+      "truck_days": "Aantal dagen dat u de verhuiswagen wilt huren",
+      "employers": "Wilt u een verhuiskracht huren?",
+      "employers_numbers": "Aantal verhuiskrachten dat u wilt huren",
+      "employers_days": "Aantal dagen dat u een verhuiskracht wilt huren",
+      "spoed": "Betreft het een spoedverhuizing?",
+      "message": "Korte omschrijving inboedel*",
+      "checkbox": "Akkoord",
+      "privacy": "Met bovenstaande akkoordverklaring, gaat u ermee akkoord dat Daly Verhuizingen uw persoonlijke gegevens voor de contactaanvraag verwerkt. Bekijk voor meer informatie over de manier waarop Daly Verhuizingen met uw gegevens omgaat in onze",
+      "button": "Verstuur"
+    }
+  },
+  "inschrijven": {
+    "title": "Inschrijven",
+    "text": "Leuk dat u komt inschrijven. Wij hopen u en uw kind snel te zien bij De Kleine Aapjes"
+  },
+  "documents": {
+    "policy": "Algemene voorwaarden",
+    "privacy": "Privacy Beleid"
+  }
+}

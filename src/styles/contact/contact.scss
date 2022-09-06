@@ -1,0 +1,151 @@
+.contact {
+  @include flex(flex-start, center, column);
+  @include size(100%, 100%);
+  max-width: $max-width;
+
+  .offerte{
+    align-items: flex-start;
+  }
+
+}
+
+.form {
+  @include flex(space-between, flex-start, column);
+  @include size(100%, 100%);
+  max-width: 800px;
+}
+
+.privacy {
+  @include flex(flex-start, flex-start, column);
+  @include size(100%, 100%);
+
+  label {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 20px;
+
+}
+
+.privacy-akkoordverklaring {
+  @include flex(flex-start, center, row);
+  @include size(100%, 100%);
+  margin-bottom: 10px;
+  input{
+    margin-right: 5px;
+  }
+
+  label{
+    font-size: 12px !important;
+  }
+
+}
+
+.offerte-wrapper{
+  display: grid;
+  @include size(100%, auto);
+  grid-template-columns: 1fr 1fr;
+  max-width: $max-width;
+  grid-gap: 50px;
+  justify-items: center;
+  align-items: start;
+}
+
+.offerte{
+  @include size(100%, auto);
+  @include flex(flex-start, flex-start, column);
+  padding: 0 20px 20px 20px;
+  max-width: 100%;
+
+  h2{
+    margin: 20px 0;
+  }
+
+}
+
+.sub-offerte{
+  @include size(100%, auto);
+  @include flex(flex-start, flex-start, column);
+  .form{
+    max-width: 100%;
+  }
+}
+
+.question-field {
+  @include flex(space-between, center, row);
+  margin-bottom: 50px;
+  width: 100%;
+
+  label {
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  span, select{
+    @include flex(flex-end, center, row);
+    max-width: 400px;
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .input-container {
+    flex: 1;
+
+    &:nth-of-type(2){
+      flex:0.5;
+      padding-left: 5px;
+    }
+
+    input {
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+  &.checkbox{
+    span{
+      @include flex(flex-start, center, row);
+      max-width: 400px;
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .offerte-wrapper{
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+
+  .offerte{
+    border: none;
+  }
+
+  .offerte-hidden{
+    display: none;
+  }
+
+  .question-field {
+    @include flex(flex-start, flex-start, column);
+    margin-bottom: 25px;
+
+    label{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    span, select{
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+}

@@ -1,0 +1,189 @@
+$indigo: #536dc8;
+$danube: #6191d1;
+$white: #fff;
+$bermuda: #77D7B9;
+
+.header-container {
+  @include size(100vw, auto);
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+}
+
+.banner {
+  width: 100vw;
+  height: 40px;
+  background-color: $primary-color;
+  display: flex;
+  z-index: 1000;
+  @include flex(space-between, center, row);
+  padding: 10px 0;
+
+  a {
+    color: white !important;
+
+    &:hover {
+      color: white !important;
+      text-decoration-color: white;
+    }
+  }
+
+  .banner-close{
+    display: block;
+    margin-right: 30px;
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  &.close{
+    display: none;
+  }
+
+}
+
+.header {
+  @include size(100%, 80px);
+  @include flex(center, center, row);
+  padding: 0 $padding-pc;
+  position: relative;
+}
+
+.header-logo {
+  margin: 0;
+  z-index: 9999;
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+}
+
+//
+////For menu to use as relative parent
+//.header-relative {
+//  @include size(100vw, 100%);
+//  @include flex(center, center, row);
+//  position: relative;
+//  padding: 0 $padding-pc;
+// }
+
+.header-wrapper {
+  @include size(100%, 100%);
+  max-width: 1400px;
+  @include flex(space-between, center, row);
+}
+
+.header-menu {
+  @include flex(center, center, row);
+  @include size(100%, 100%);
+  position: relative;
+
+  a {
+    @include flex(space-between, center, row);
+    @include size(auto, auto);
+    margin: 0 20px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color !important;
+    }
+
+    &.active-link {
+      color: $primary-color !important;
+    }
+
+  }
+
+  &.open {
+    transform: translateX(0);
+    transition: all ease-in-out 500ms;
+  }
+}
+
+.header-dropdown {
+  @include size(auto, 100%);
+  @include flex(center, center, column);
+  position: relative;
+
+  .header-dropdown-link {
+    @include size(auto, 100%);
+  }
+
+  &:hover {
+    .header-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transition: 300ms ease-in-out;
+    }
+  }
+
+}
+
+.header-dropdown-menu {
+  @include size(auto, auto);
+  @include flex(center, flex-start, column);
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms ease-in-out;
+
+  a {
+    width: 100%;
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    white-space: nowrap;
+  }
+
+}
+
+//Moon / sun icon
+.icon {
+  width: 25px;
+  height: 25px;
+  z-index: 10000000;
+  cursor: pointer;
+  margin-left: 20px;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.header-actions {
+  @include size(auto, 100%);
+  @include flex(flex-end, center, row)
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 4px;
+  z-index: 100000;
+  background: $primary-color;
+  left: 0;
+  width: 0%;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .header-container {
+    display: none;
+  }
+
+}
+

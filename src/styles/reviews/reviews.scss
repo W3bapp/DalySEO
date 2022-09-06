@@ -1,0 +1,100 @@
+.reviews{
+  @include size(100%, auto);
+  @include flex(center, center, column);
+  max-width: 700px;
+  z-index: 10;
+  h1, h2, h3, p {
+    color: white !important;
+  }
+}
+
+.review-card{
+  @include size(100%, auto);
+  max-width: 700px;
+  display: block;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+
+}
+
+.review-details{
+  @include size(100%, auto);
+  @include flex(center, center, row);
+  margin: 50px 0;
+}
+
+.review-avatar{
+  margin-right: 20px;
+  overflow: hidden;
+
+  img{
+    @include size(70px, 70px);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+}
+
+.slick-slider{
+  //This slider gets width from .reviews parent so set max-width of reviews to that of the card
+  width:100%;
+  height: auto;
+ }
+
+.arrow .slick-arrow{
+  width: 50px;
+  height: auto;
+}
+
+.slick-prev{
+  top:50%;
+  transform: translateY(-50%) rotate(90deg) scale(1.2);
+}
+
+.slick-next{
+  top:50%;
+  transform: translateY(-50%) rotate(-90deg) scale(1.2);
+}
+
+.slick-disabled{
+  cursor: auto;
+  opacity: 0.2;
+}
+
+.slider-indicator-wrapper{
+  @include size(100%, auto);
+  @include flex(center, center, row);
+  margin-top: 20px;
+}
+
+.slider-indicator {
+  @include size(15px, 15px);
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 10px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $primary-color;
+  }
+
+  &.slider-indicator-active{
+    background-color: $primary-color;
+    cursor: auto;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .review-details{
+    @include flex(center, center, column);
+    margin: 30px 0;
+  }
+
+  .review-avatar{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+}

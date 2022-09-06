@@ -1,0 +1,147 @@
+.landing {
+  @include flex(center, center, column);
+  @include size(100vw, auto);
+  padding: 0 $padding-pc;
+  min-height: 100vh;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    @include size(100%, 100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    z-index: 10;
+    backdrop-filter:blur(0.25px);
+  }
+
+}
+
+.landing-title-container {
+  @include flex(space-between, center, row);
+  @include size(100%, 100%);
+  padding: 150px 0;
+  flex: 1;
+  max-width: 1400px;
+  z-index: 10;
+
+  h1, p {
+    color: white !important;
+  }
+
+}
+
+.landing-title {
+  @include size(100%, 100%);
+  @include flex(center, flex-start, column);
+  max-width: $max-width;
+  min-height: auto;
+  box-sizing: content-box;
+
+  h1 {
+    max-width: 600px;
+  }
+
+  p {
+    max-width: 500px;
+  }
+
+}
+
+.landing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .landing {
+    padding: 0 $padding-tablet;
+  }
+
+  .landing-title-container {
+    @include flex(flex-start, center, column);
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .landing {
+    padding: 0 $padding-mobile;
+  }
+
+}
+
+//Small landing styles
+
+
+.landing-small {
+  @include flex(flex-start, center, column);
+  @include size(100vw, auto);
+  min-height: 60vh;
+  padding: 80px $padding-pc 0 $padding-pc;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    @include size(100%, 100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    z-index: 10;
+    backdrop-filter:blur(0.25px);
+  }
+
+  h1 {
+    z-index: 20;
+    color: white !important;
+  }
+
+  img {
+    @include size(100%, 100%);
+    object-fit: cover;
+    position: absolute;
+    object-position: 50% 50%;
+    left: 0;
+    top: 0;
+  }
+
+}
+
+.landing-title-small {
+  @include size(100%, auto);
+  @include flex(center, center, column);
+  @include padding(100px 0);
+  max-width: $max-width;
+  min-height: 60vh;
+  z-index: 100;
+
+
+  h1 {
+    max-width: 1000px;
+  }
+
+}
+
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .landing-small {
+    padding: 0 $padding-tablet;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+
+  .landing-small {
+    padding: 0 $padding-mobile;
+  }
+}
+

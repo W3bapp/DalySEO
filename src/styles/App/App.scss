@@ -1,0 +1,71 @@
+@import "../collections/collections";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  overflow-x: hidden !important;
+  font-family: 'Poppins', 'Source Sans Pro', serif !important;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: $primary-color !important;
+    text-decoration-color: $primary-color;
+  }
+}
+
+.slogan{
+  @include font-size(3rem);
+  @include margin-bottom(30px);
+}
+
+.landing-text{
+  @include font-size(1rem);
+  @include margin-bottom(30px);
+}
+
+.title{
+  @include font-size(2rem);
+  color: $primary-color !important;
+  @include margin-bottom(40px);
+}
+
+.subtitle{
+  @include font-size(1.5rem);
+  @include margin-bottom(20px);
+}
+
+.text{
+  @include font-size(1rem);
+  @include margin-bottom(20px);
+}
+
+.mobile-navigation-text{
+  @include font-size(1.5rem);
+  @include margin(30px 0);
+}
+
+.price-title{
+  @include font-size(1.2rem);
+  @include margin-bottom(10px);
+}
+
+.price-action-text{
+  @include font-size(1.1rem);
+  @include margin-bottom(10px);
+  color: $primary-color !important;
+}
+
+.label{
+  @include font-size(0.75rem);
+  @include margin-bottom(20px);
+}

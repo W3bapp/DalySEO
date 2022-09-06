@@ -1,0 +1,97 @@
+
+.flex-start {
+  @include flex(flex-start, center, row);
+  margin-bottom: 20px;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  &.checkbox {
+    & input {
+      margin-right: 10px;
+    }
+  }
+
+}
+
+.input-container {
+  width: 100%;
+  height: auto;
+  max-width: $max-width;
+  box-sizing: border-box;
+}
+
+label {
+  display: inline-block;
+  color: $primary-color;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+input[type="date"], input[type="number"], input[type="text"] {
+  width: 100%;
+  border-radius: 5px;
+  padding: 16px 8px;
+  height: 30px;
+  outline-color: #DBE1E7;
+  border: 2px solid #dbe1e7;
+  box-shadow: none;
+  -webkit-appearance: none;
+  margin-bottom: 20px;
+  transition: 100ms ease-in all;
+  font-family: inherit;
+  background-color: white !important;
+
+  &:focus {
+    outline-color: $primary-color;
+    border: 2px solid $primary-color;
+    transition: 100ms ease-in all;
+  }
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1.5em 1em;
+  height: 200px;
+  outline-color: #DBE1E7;
+  border: 2px solid #dbe1e7;
+  box-shadow: none;
+  -webkit-appearance: none;
+  transition: 100ms ease-in all;
+  font-family: inherit;
+  background-color: white !important;
+
+  &:focus {
+    outline-color: $primary-color;
+    border: 2px solid $primary-color;
+    transition: 100ms ease-in all;
+  }
+
+}
+
+select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 8px;
+  outline-color: #DBE1E7;
+  border: 2px solid #dbe1e7;
+  box-shadow: none;
+  margin-bottom: 20px;
+  transition: 100ms ease-in all;
+  font-family: inherit;
+  background-color: white !important;
+
+  &:focus {
+    outline-color: $primary-color;
+    border: 2px solid $primary-color;
+    transition: 100ms ease-in all;
+  }
+
+  &:disabled {
+    background-color: #eee !important;
+  }
+
+}
+

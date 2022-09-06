@@ -1,0 +1,189 @@
+.header-mobile-container{
+  @include size(100vw, auto);
+  @include flex(center, center, column);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-mobile {
+  @include size(100%, 80px);
+  @include flex(center, center, row);
+  padding: 0 $padding-tablet;
+  position: relative;
+
+  a{
+    text-decoration: none;
+  }
+
+}
+
+.header-wrapper-mobile {
+  @include size(100%, 100%);
+  @include flex(space-between, center, row);
+  max-width: $max-width;
+  z-index: 1000;
+}
+
+.header-menu-mobile-wrapper {
+  width: 100vw;
+  @include flex(flex-start, center, column);
+  transition: 0.4s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 0;
+
+  .header-menu-mobile {
+    @include flex(flex-start, center, column);
+    padding-top: 150px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-in-out all;
+
+    //@for $i from 1 through 6 {
+    //  a:nth-last-child(#{$i}) {
+    //    opacity: 0;
+    //    transition: opacity ease-in 300ms;
+    //    transition-delay: calc(#{$i} * 100ms);
+    //  }
+    //}
+
+  }
+
+
+  &.menu-open {
+    width: 100vw;
+    height: 100vh;
+    transition: height 1s cubic-bezier(.42, .97, .52, 1.49);
+
+    .header-menu-mobile {
+      visibility: visible;
+      opacity: 1;
+      transition: 500ms ease-in-out all;
+
+      //@for $i from 1 through 6 {
+      //  a:nth-child(#{$i}) {
+      //    opacity: 1;
+      //    transition: opacity ease-in 50ms;
+      //    transition-delay: calc(100ms + #{$i * 50ms} );
+      //  }
+      //}
+
+    }
+  }
+
+}
+
+.header-logo-mobile {
+  margin: 0;
+  z-index: 9999;
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.header-dropdown-mobile {
+  @include size(auto, auto);
+  @include flex(center, center, column);
+  transition: max-height 400ms ease-in-out;
+  overflow: hidden;
+
+  input {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  svg {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+    transition: transform 200ms ease-in-out;
+  }
+
+  input[type="checkbox"] {
+    &:checked {
+      ~ {
+
+        label {
+          svg {
+            transition: transform 200ms ease-in-out;
+            transform: rotate(180deg);
+          }
+        }
+
+        .header-dropdown-menu-mobile {
+          max-height: 200vh;
+          transition: max-height 400ms ease-in-out;
+        }
+      }
+    }
+
+  }
+
+}
+
+.header-dropdown-menu-mobile {
+  @include flex(flex-start, center, column);
+  transition: 200ms ease-in-out;
+  max-height: 0;
+  a{
+    @include font-size(1rem);
+    @include margin(10px 0)
+  }
+}
+
+.header-dropdown-link-mobile {
+  @include size(auto, auto);
+  @include flex(center, center, row);
+}
+
+.header-actions-mobile {
+  @include size(auto, 100%);
+  @include flex(flex-end, center, row)
+}
+
+/* The progress container (grey background) */
+.progress-container-mobile {
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar-mobile {
+  height: 4px;
+  z-index: 100000;
+  background: $primary-color;
+  width: 0%;
+}
+
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .header-mobile-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .header-mobile {
+    padding: 0 $padding-mobile;
+  }
+
+  .header-logo-mobile {
+    img {
+      width: 130px;
+    }
+  }
+}

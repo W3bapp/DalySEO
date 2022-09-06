@@ -1,0 +1,98 @@
+.footer{
+  @include size(100%, auto);
+  @include flex(space-between, center, column);
+  padding: 100px $padding-pc 50px $padding-pc;
+
+  h3{
+    color:$primary-color !important;
+  }
+
+  p{
+    font-size: 16px;
+  }
+}
+
+.footer-wrapper{
+  @include size(100%, auto);
+  @include flex(space-between, flex-start, row);
+  flex-wrap: wrap;
+  max-width: calc(#{$max-width} + 400px);
+}
+
+.footer-grid{
+  @include flex(flex-start, flex-start, column);
+  @include size(auto, auto);
+}
+
+.footer-social-media{
+  @include flex(flex-start, center, column);
+  margin-top: 50px;
+  svg{
+    margin-top:15px;
+    cursor: pointer;
+
+    &:hover{
+      path{
+        fill:$primary-color
+      }
+    }
+  }
+}
+
+.footer-bottom{
+  @include size(100%, auto);
+  @include flex(space-between, center, row);
+  max-width: calc(#{$max-width} + 400px);
+  padding: 25px 0 0 0;
+
+  span{
+    p{
+      margin-right:5px;
+    }
+    @include flex(flex-start, center, row);
+  }
+
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+
+  .footer{
+    padding: 100px $padding-tablet 50px $padding-tablet;
+  }
+
+  .footer-wrapper{
+    max-width: $max-width;
+  }
+
+  .footer-grid{
+    width: 45%;
+    margin-bottom: 25px;
+  }
+
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+
+  .footer{
+    padding: 50px $padding-mobile;
+
+    a, p{
+      font-size: 14px;
+    }
+
+  }
+
+  .footer-grid{
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer-social-media{
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+
+
+}

@@ -1,0 +1,63 @@
+.services{
+  @include flex(space-between, flex-start, row);
+  @include size(100%, auto);
+  @include margin-top(-150px);
+  max-width: 1400px;
+  flex-wrap: wrap;
+}
+
+.service-card{
+  @include size(20%, auto);
+  @include flex(flex-start, center, column);
+  min-height: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.service-card-image{
+  @include size(150px, 150px);
+  position: relative;
+  margin-bottom: 45px;
+
+  img{
+    object-fit: cover;
+    @include size(100%, 100%);
+    object-position: center;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .service-card{
+    max-width: 500px;
+    width: 45%;
+  }
+
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .services{
+    @include flex(flex-start, center, column);
+    @include size(100%, auto);
+    padding: 0;
+  }
+
+  .service-card{
+    width: 100%;
+    max-width: 500px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .services{
+    @include margin-top(-50px);
+  }
+
+  .service-card-image{
+    width: 100px;
+    height: 100px;
+  }
+
+}
